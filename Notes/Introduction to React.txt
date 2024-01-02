@@ -1,0 +1,186 @@
+React kya He?
+-------------------------------------------------------------
+
+React ek JavaScript library hai jo user interfaces banane me madad karta hai. Iska use user interfaces ko banaane aur maintain karne me aasani aur efikasi se madad karna hai. React, Facebook ne develop kiya hai aur open-source hai, jiska istemal aaj kal bahut se web applications aur websites me hota hai.
+
+React ka mool uddeshya ek declarative aur component-based approach provide karna hai. Iska matlab hai ki aapko batana padta hai ki aap chahte kya hai (declarative), aur React khud decide karta hai ki kaise use case ko achieve kiya jaye. Components ka use karke, aap apne UI ko small, independent pieces me divide kar sakte hain, jo ki alag-alag tarike se re-useable hote hain.
+
+Yeh library aam taur par single-page applications ke liye istemal hoti hai jisse ki user interfaces ko dynamic banaya ja sake, jaise ki real-time updates aur interactivity.
+
+Iske alawa, React ek virtual DOM (Document Object Model) ka istemal karta hai, jo ki actual DOM ke sath interact karke performance me sudhar karta hai. Isse page ke bina refresh kiye bahut se changes ho sakte hain, jisse user experience behtar hota hai.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+React Ko Facebook Ne Kyu Banaya. Poori Kahani
+-------------------------------------------------------------
+
+React ko Facebook ne banaya tha taaki woh apne web applications aur websites ke user interfaces ko behtar tareeke se develop aur maintain kar sake. Yeh library unhe ek declarative aur component-based approach provide karti hai jisse development process me suvidha ho. 
+
+Yahan, kuch reasons hain jinke wajah se Facebook ne React banaya:
+
+1. **Efficient User Interfaces:** React ka use karke, developers ko user interfaces ko efficiently develop karne aur maintain karne me madad milti hai. Components ka istemal karke, UI ko small, re-usable pieces me divide kiya ja sakta hai, jisse code ko organize karna aasan ho jata hai.
+
+2. **Real-time Updates:** Facebook jaise large-scale applications me real-time updates ka hona bahut zaroori hai. React, virtual DOM ka istemal karta hai jo actual DOM ke sath interact karke sirf zaroori changes ko update karta hai, jisse overall performance improve hoti hai.
+
+3. **Declarative Syntax:** React ka declarative syntax developers ko batata hai ki "kya karna hai" aur framework khud decide karta hai "kaise karna hai". Isse code likhne me aur padhne me aasani hoti hai.
+
+4. **Open Source:** Facebook ne React ko open-source banaya, jisse ki developers worldwide ispar contribute kar sake aur iska istemal apne projects me bhi kar sake. Yeh ek vibrant community ka bhi part ban gaya hai.
+
+5. **Cross-Platform Development:** React Native, jo React ka ek part hai, allows developers ko mobile applications bhi banane me madad karta hai. Isse ek hi codebase se iOS aur Android dono platforms ke liye apps develop kiye ja sakte hain.
+
+Overall, React ne Facebook ko ek powerful aur scalable tool provide kiya hai jisse unki web applications ka development aur maintenance asaan ho gaya hai. Iske open-source nature ne isay industry-wide popular banaya aur iska istemal aaj kal bahut se companies aur developers dwara kiya ja raha hai.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+How DOM Work?
+-------------------------------------------------------------
+
+DOM, ya Document Object Model, ek tree-like structure hai jo web pages ke HTML or XML documents ko represent karta hai. DOM ke madhyam se, developers ko webpage ke content ko access aur manipulate karne ka tareeka milta hai. Chaliye DOM ko tree ke concept ke madhyam se samajhte hain.
+
+1. **Document Object Model (DOM):** Sabse pehle, jab aap ek web page ko browser me open karte hain, browser use parse karta hai aur ek internal representation create karta hai, jo DOM kehlata hai.
+
+2. **Tree Structure:**
+   - **Root Element:** Web page ka starting point ek root element hota hai, jo document element ke roop me hota hai. Is element ka example `<html>` hota hai.
+   - **Parent-Child Relationships:** HTML document ke har element ka apna ek parent hota hai (except root element), aur ek se zyada children ho sakte hain.
+   - **Hierarchy:** Yeh parent-child relationships ek hierarchy create karte hain, jise tree ke roop me visualized kiya ja sakta hai.
+
+3. **Nodes:**
+   - **Elements:** HTML document ke tags, jaise ki `<p>`, `<div>`, `<span>`, etc., DOM ke elements ko represent karte hain.
+   - **Attributes:** Element ke attributes, jaise ki `class`, `id`, etc., bhi nodes ke roop me DOM me hote hain.
+   - **Text Nodes:** Web page ke text content ko represent karne ke liye text nodes hote hain.
+
+4. **Traversal:**
+   - **Parent:** Har node ke ek parent hota hai, jise woh direct contain karta hai.
+   - **Child:** Har node ke ek se zyada children ho sakte hain.
+   - **Siblings:** Nodes jo ek hi level par hote hain, unhe siblings kehte hain.
+
+5. **Accessing and Manipulating:**
+   - Developers JavaScript ka istemal karke DOM se interact karte hain. They can access elements, modify their content, add or remove elements, change styles, etc.
+   - For example:
+     ```javascript
+     // Accessing an element by its ID
+     var element = document.getElementById("myElement");
+
+     // Modifying the content of an element
+     element.innerHTML = "New content";
+
+     // Creating a new element and adding it to the DOM
+     var newElement = document.createElement("div");
+     document.body.appendChild(newElement);
+     ```
+
+6. **Dynamic Interaction:**
+   - DOM allows dynamic interaction with the webpage. Changes made to the DOM are reflected in the displayed content, and vice versa.
+
+Yeh tree-like structure aur hierarchies developers ko ek systematic tareeke se web page ke content ko manipulate karne ki anumati deta hai. Iske through, JavaScript aur other scripting languages ke madhyam se, developers webpage ko dynamically update aur modify kar sakte hain.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+Javascript me Kya Problem Ayi To Facebook Ne React Jaisi Library Create Krdi?
+-------------------------------------------------------------
+
+Facebook ne React ko banane ka mool uddeshya apne large-scale web applications ke user interfaces ko behtar tareeke se manage aur maintain karne ka tha. JavaScript, jo ki client-side scripting language hai, ka use web development me common hai, lekin large and complex applications develop karte waqt, kuch challenges aate hain, jinme se kuch yeh hain:
+
+1. **DOM Manipulation Overhead:** JavaScript ke traditional approach me, DOM manipulation direct hoti hai. Jab koi change hoti hai, toh DOM ko update karna resource-intensive ho sakta hai. Especially, jab complex user interfaces ko dynamic tareeke se update karna hota hai, performance me kuch issues aate hain.
+
+2. **Manual Data Binding:** Data ko UI se bind karne ke liye developers ko manually DOM elements ko update karna padta hai. Isse code maintain karne aur bugs fix karna mushkil ho jata hai.
+
+3. **Lack of Component-Based Architecture:** Traditional JavaScript me component-based architecture ka concept kam hota hai. Components ke reuse ke liye developers ko extra efforts dalne padte hain.
+
+4. **Unidirectional Data Flow:** JavaScript me data flow unidirectional nahi hota, jisse data ko track karna aur manage karna complex ho jata hai.
+
+React ne in challenges ko address karne ke liye kuch features provide ki hain:
+
+- **Virtual DOM:** React ka use karke, ek virtual DOM maintain hota hai, jo actual DOM ke sath interact karke changes ko optimize tareeke se apply karta hai, jisse performance improve hoti hai.
+
+- **Component-Based Architecture:** React ek component-based architecture follow karta hai. Har UI element ko ek component me represent kiya jata hai, jisse reuse aur maintainability badhti hai.
+
+- **Declarative Syntax:** React ka declarative syntax developers ko batata hai ki "kya karna hai" aur framework khud decide karta hai "kaise karna hai".
+
+- **Unidirectional Data Flow:** React me data flow unidirectional hota hai, jisse data ko track karna aur manage karna asaan ho jata hai.
+
+In features ke saath, React ne developers ko ek structured aur efficient tareeke se user interfaces develop karne ki anumati di hai, jisse large-scale applications ko manage karna aasan ho gaya hai.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+React kya Kaam Krta he?
+-------------------------------------------------------------
+
+React ek JavaScript library hai jo web applications banane me madad karta hai. React ka upayog karke, aapko DOM elements ko query aur update karne ke liye chinta karne ki jarurat nahi hoti hai, kyunki React ye sab kuch apne aap sambhal leta hai.
+
+React ek web page ko chhote aur punahsambhaavanaarthi components mein baat deta hai. Har ek component ek chhota module hota hai jo apne aap mein puraani cheezein sambhal sakta hai aur dusre components ke saath asaani se mil jaata hai. Isse code ko likhne aur maintain karne mein madad milti hai.
+
+Jab aap React ka upayog karte hain, toh aapko direct DOM elements ko handle karne ki chinta nahi hoti. React ye zimmedari apne upar leta hai aur DOM elements ko sahi dhang se create aur update karta hai. Isse aapko code likhne mein asaani hoti hai aur aap apne application ke logic par dhyan de sakte hain, bina DOM ke complex interactions ke fikar kiye.
+
+Iske alawa, React ka upayog karke aap samay bhi bacha sakte hain. React ke components punahsambhaavanaarthi hote hain, jisse aap unhe alag-alag jagahon par dobara upayog kar sakte hain. Ye ek consistent aur efficient tareeka hai code likhne ka, jo developers ke liye kaafi faydemand hota hai.
+
+In sabhi karanon se, React ek shaktishaali aur aasaan framework hai jo web development ko sukhad bana deta hai. Iske upayog se code likhne mein cheezein aasan hoti hain aur aapko direct DOM manipulation ke chakkar mein padhne ki jarurat nahi hoti hai.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+JS Vs React
+-------------------------------------------------------------
+
+JavaScript aur React dono web development mein istemaal hone wale tools hain, lekin inme kuch mukhya farq hote hain.
+
+1. **JavaScript:**
+   - **Programming Language:** JavaScript ek programming language hai, jo web browsers mein client-side scripting ke liye istemaal hota hai.
+   - **Cross-platform:** JavaScript har modern web browser mein chalta hai, jo kisi bhi device aur operating system par kaam karte hain.
+   - **General-purpose:** JavaScript ek general-purpose language hai, iska istemaal web development ke alawa bhi kai jagah par hota hai.
+
+2. **React:**
+   - **Library:** React ek JavaScript library hai jo UI (User Interface) components banane ke liye banaya gaya hai. Isse primarily user interfaces develop karne mein madad milti hai.
+   - **Developed by Facebook:** React ko Facebook ne develop kiya tha aur baad mein open-source kiya gaya hai.
+   - **Component-based:** React component-based architecture par adharit hai, jisme har ek UI element ko ek component mein encapsulate kiya jata hai. Ye modular approach ko badhava deta hai.
+
+**Farq:**
+   - **React JavaScript ka ek hissa hai:** React bhi JavaScript ka ek library hai. React code likhne ke liye JavaScript ka hi upayog hota hai, lekin React ek specific type ki JavaScript library hai jo UI components ke liye design ki gayi hai.
+   - **Component-based approach:** React ka sabse bada farq ye hai ki ye ek component-based approach par adharit hai. Isme UI ko chhote components mein baata gaya hai, jo alag-alag tareekon se jude hote hain aur punahsambhaavanaarthi hote hain.
+   - **Virtual DOM:** React ek virtual DOM ka istemaal karta hai, jo ki actual DOM se alag hota hai. Ye performance ko sudharne mein madad karta hai, kyun ki React sirf jaruratmand changes ko update karta hai, puri page ko nahi.
+
+In dono mein se JavaScript ek programming language hai jo har tarah ke development ke liye istemaal hota hai, jabki React ek specific library hai jo user interfaces banane ke liye taiyar hai. React ka istemaal karke developers ko components ka istemaal karke code likhne mein asaani hoti hai aur application ka state aur UI ko achhi tarah se manage kar sakte hain.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+Intro to Components
+-------------------------------------------------------------
+
+Components ka istemal React aur dusre modern JavaScript frameworks mein UI ko organize, modularize, aur reusability ko badhane ke liye hota hai. Yeh kuch khaas tareekon se kaam karte hain:
+
+1. **Modularity:** Components ko alag-alag tukdon mein tukda kiya jata hai, jisse code ka har hissa ek specific kaam ko handle kare. Isse code ki readability badhti hai aur development aur maintenance mein asaan hota hai.
+
+2. **Reusability:** Components ek dusre ke andar include ho sakte hain, isse ek component ka dobara upayog karne mein asaan hota hai. Reusability ke karan, aap ek baar likhe gaye component ko alag-alag jagahon par asaani se istemaal kar sakte hain, jo development time ko bachata hai.
+
+3. **Maintainability:** Components ka istemaal karke code ko maintain karna asaan hota hai. Har ek component ek specific responsibility ka dhyan rakhta hai, jisse bugs ko dhundhna aur fix karna asaan ho jata hai.
+
+4. **Readability:** Components ke istemaal se code ka structure saaf hota hai aur kisi bhi specific functionality ko dhundhna asaan ho jata hai. Ye readability ko badhata hai, especially jab codebase bada hota hai.
+
+5. **Encapsulation:** Har component khud mein encapsulated hota hai, matlab ki uska internal state aur functionality dusre components se alag hota hai. Isse, ek component ko update karne se dusre components ko asar nahi padta, aur code maintainable rehta hai.
+
+6. **Scalability:** Components ki madad se aap apne application ko aasani se scale kar sakte hain. Naye components ko add karna, existing components ko modify karna aur unhe rearrange karna aasan hota hai.
+
+React ka ek mool mantra hai "Learn Once, Write Anywhere," jo iske components ke reusability aur flexibility ko underline karta hai. Components ka istemaal karke developers ko ek consistent aur efficient tareeka milta hai UI banane ka, jisse unhe apne application ke logic par dhyan dena aasan hota hai.
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
